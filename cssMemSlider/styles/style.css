@@ -103,7 +103,7 @@ h6 {
   position: relative;
   overflow: hidden;
   width: 1000px;
-  box-shadow: 0 0 15px 0px black;
+  box-shadow: 0 0 20px 0px black;
 }
 
 .slider__slides {
@@ -114,7 +114,7 @@ h6 {
 
 .slider__slide {
   width: 20%;
-  transition: all 0.4s ease;
+  transition: all 0.8s ease;
 }
 
 .slider__slide img {
@@ -140,6 +140,7 @@ input[name="slide"] {
   width: 25px;
   height: 8px;
   background-color: rgb(255, 255, 255);
+  opacity: 0.6;
   border-radius: 10px;
   transition: all 0.2s ease;
   box-shadow: 0 0 5px 0px black;
@@ -149,13 +150,33 @@ input[name="slide"] {
   cursor: pointer;
   transform: scale(1.2);
   background-color: rgb(255, 255, 255);
-  opacity: 0.6;
 }
 
 .bar:active {
   cursor: pointer;
   background-color: rgb(4, 122, 239);
-  opacity: 0.8;
+}
+
+.slider__slide img {
+  transition: all 0.2s ease;
+  visibility: hidden;
+}
+
+#radio-1:checked ~ #slide-1 img,
+#radio-2:checked ~ #slide-2 img,
+#radio-3:checked ~ #slide-3 img,
+#radio-4:checked ~ #slide-4 img,
+#radio-5:checked ~ #slide-5 img {
+  visibility: visible;
+}
+
+#radio-1:checked ~ div.slider__navigation label:nth-child(1),
+#radio-2:checked ~ div.slider__navigation label:nth-child(2),
+#radio-3:checked ~ div.slider__navigation label:nth-child(3),
+#radio-4:checked ~ div.slider__navigation label:nth-child(4),
+#radio-5:checked ~ div.slider__navigation label:nth-child(5) {
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
 }
 
 #radio-1:checked ~ #slide-1 {

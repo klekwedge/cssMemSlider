@@ -85,6 +85,13 @@ h6 {
 /*-------------------------------------------------------------*/
 /*-----Technical classes---------------------------------------*/
 /*-------------------------------------------------------------*/
+._wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
 ._container {
   max-width: 1200px;
   padding: 0px 40px;
@@ -96,9 +103,32 @@ h6 {
 /*-------------------------------------------------------------*/
 
 /*-------------------------------------------------------------*/
+/*-----HEADER--------------------------------------------------*/
+/*-------------------------------------------------------------*/
+
+.header {
+  background-color: #1a3980;
+  margin-bottom: 50px;
+  color: white;
+}
+.header__container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.menu__logo {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+}
+
+/*-------------------------------------------------------------*/
 /*-----Slider--------------------------------------------------*/
 /*-------------------------------------------------------------*/
 
+.page {
+  flex: 1 1 auto;
+  margin-bottom: 30px;
+}
 
 .slider {
   max-width: 1000px;
@@ -164,11 +194,12 @@ h6 {
   height: 15px;
   background: #bbb;
   cursor: pointer;
+  transition: all 0.4s ease;
 }
 
 .slider__navigation label:hover {
-  background: #76c8ff;
-  border: 4px solid black;
+  background: #2c5fd4;
+  /* border: 4px solid black; */
 }
 
 #radio-1:checked ~ .slider__navigation label:nth-child(1),
@@ -176,7 +207,7 @@ h6 {
 #radio-3:checked ~ .slider__navigation label:nth-child(3),
 #radio-4:checked ~ .slider__navigation label:nth-child(4),
 #radio-5:checked ~ .slider__navigation label:nth-child(5) {
-  background: #18a3dd;
+  background: #3dd42c; 
 }
 
 .slider__slides .slider__images {
@@ -186,3 +217,32 @@ h6 {
 /*-------------------------------------------------------------*/
 /*-----Footer--------------------------------------------------*/
 /*-------------------------------------------------------------*/
+
+.footer {
+  padding: 25px 0px;
+  background-color: #1A3980;
+}
+
+.footer__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 20px;
+}
+
+.footer__item {
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  line-height: 130%;
+}
+
+.footer__link {
+  font-size: 25px;
+  color: white;
+  transition: all 0.2s ease-in;
+}
+
+.footer__link:hover {
+  color: #ffc234;
+}

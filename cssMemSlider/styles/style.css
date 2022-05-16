@@ -36,6 +36,7 @@ body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
 input,
 button,
 textarea {
@@ -145,9 +146,11 @@ h6 {
 }
 
 .cover {
+  padding: 15px 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px 10px;
 }
 
 .cover > * {
@@ -226,7 +229,6 @@ h6 {
 }
 
 .slider__text h2 {
-  padding-top: 10px;
   width: 100%;
   height: 100%;
   font-size: 24px;
@@ -264,15 +266,7 @@ h6 {
 /* */
 /* */
 
-.slider__navigation label {
-  border-radius: 10px;
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  background: #bbb;
-  cursor: pointer;
-  transition: all 0.4s ease;
-}
+
 
 #radio-1:checked ~ .cover .slider__slides_text .slider__text:nth-child(1),
 #radio-2:checked ~ .cover .slider__slides_text .slider__text:nth-child(2),
@@ -311,30 +305,42 @@ h6 {
 
 /* Navigation */
 .slider__navigation {
-  padding: 10px 0px;
   background-color: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px 10px;
 }
 
 .slider__navigation label {
-  border-radius: 10px;
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  background: #d5d6d2;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
-  transition: all 0.4s ease;
-  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.slider__navigation label:hover {
+.slider__navigation label div{
+  display: block;
+  border-radius: 10px;
+
+  width: 15px;
+  height: 15px;
+  background: #bbb;
+  transition: all 0.4s ease;
+
+}
+
+.slider__navigation label:hover div{
   background: #2c5fd4;
 }
 
-#radio-1:checked ~ .cover .slider__navigation label:nth-child(1),
-#radio-2:checked ~ .cover .slider__navigation label:nth-child(2),
-#radio-3:checked ~ .cover .slider__navigation label:nth-child(3),
-#radio-4:checked ~ .cover .slider__navigation label:nth-child(4),
-#radio-5:checked ~ .cover .slider__navigation label:nth-child(5) {
+
+#radio-1:checked ~ .cover .slider__navigation label:nth-child(1) div,
+#radio-2:checked ~ .cover .slider__navigation label:nth-child(2) div,
+#radio-3:checked ~ .cover .slider__navigation label:nth-child(3) div,
+#radio-4:checked ~ .cover .slider__navigation label:nth-child(4) div,
+#radio-5:checked ~ .cover .slider__navigation label:nth-child(5) div {
   background: #3dd42c;
 }
 

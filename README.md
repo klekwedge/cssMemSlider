@@ -1,1 +1,1 @@
-# css-slider
+# cssMemSlider

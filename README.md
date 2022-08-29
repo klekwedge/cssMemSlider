@@ -1,4 +1,4 @@
-# Homework: CSS Meme Slider
+# CSS Meme Slider
 ## General requirements:
 
 Make up the slider according to the requirements:
